@@ -14,7 +14,7 @@ def test_payCalculator_prints_correct_result(capfd, monkeypatch):
     out, err = capfd.readouterr()
     expected = "Pay: "+str(rate * hours)+"\n"
     assert out == expected
-def test_payCalculator_prints_error_withNonNumericHours(capfd, monkeypatch):
+def test_payCalculator_prints_error_withNonNumericHoursBonus(capfd, monkeypatch):
     hours = 'njdvnjkfdfdb'
     input = [10, hours]
     monkeypatch.setattr('builtins.input', lambda _:input.pop())
@@ -23,7 +23,7 @@ def test_payCalculator_prints_error_withNonNumericHours(capfd, monkeypatch):
     out, err = capfd.readouterr()
     expected = 'Error, please enter numeric input\n'
     assert out == expected
-def test_payCalculator_prints_error_withNonNumericPay(capfd, monkeypatch):
+def test_payCalculator_prints_error_withNonNumericPayBonus(capfd, monkeypatch):
     rate = 'bljhkjbbj'
     hours = randint(1, 100)
     input = [rate, hours]
@@ -33,7 +33,7 @@ def test_payCalculator_prints_error_withNonNumericPay(capfd, monkeypatch):
     out, err = capfd.readouterr()
     expected = 'Error, please enter numeric input\n'
     assert out == expected
-def test_payCalculator_prints_error_withOver40HoursBonus(capfd, monkeypatch):
+def test_payCalculator_prints_error_withOver40Hours(capfd, monkeypatch):
     rate = float(randint(1, 100))
     hours = randint(41, 100)
     input = [rate, hours]
