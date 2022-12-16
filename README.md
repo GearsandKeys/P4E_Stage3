@@ -1,20 +1,21 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=6637432&assignment_repo_type=AssignmentRepo)
-# Calculate Pay using variables
+# Assignment
+Rewrite your pay computation to give the employee 1.5 times the hourly rate for hours worked above 40 hours.
 
-The purpose of this assignment is to allow you to confirm you have Github Classroom set up properly and you're able to submit assignments.
+first, open payCalculator.py
 
-## Steps for completion
+Starter Code
+# This first line is provided for you
 
-1. Open `payCalculator.py`
-1. Complete the assignment as described in https://canvas.instructure.com/courses/3650963/assignments/25666006
-3. Note: complete the code inside the calculatePay section.  Each line should be indented between the comments in that file.  For example
-4. Note: There are Two Tests for the Bonus So if you have 2/4 test pastign that is OK
+```python
+hrs = input("Enter Hours:")
+```
 
-calculatePay():
-    all of the
-    code you are writing
-    should be indented 4 spaces
-    in between the comments in that file
+## Desired Output
+```python
+Enter Hours: 45
+Enter Rate: 10
+Pay: 475.0
+```
 
-1. When ready to submit, press the sync button in the assignments tab.
-1.  Hint: the desired output needs to be printed as described in the assignment, if it is not, the tests will fail.
+## How to test
+Run pytest. You want 2/4 tests to pass. The next two tests are for the next assignment!
